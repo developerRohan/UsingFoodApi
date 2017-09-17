@@ -9,6 +9,6 @@ class Recipe < ApplicationRecord
 		format :json
 
 		def self.for keyword
-    		get("", query: {q: keyword})["recipes"]
+    		get("/search", query: {q: keyword})["recipes"]
   		end
 end
